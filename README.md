@@ -1,12 +1,42 @@
-# React + Vite
+A powerful real-time collaborative code editor with live code sharing, multi-language compilation, and active user visibility, built using React, Socket.IO, and Piston API.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Live Preview
 
-Currently, two official plugins are available:
+🧑‍💻 Real-time collaborative code editing
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+💬 Active user list & typing indicators
 
-## Expanding the ESLint configuration
+🌐 Multiple programming language support:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+JavaScript, Python, C++, C, Java, C#
+
+⚡ Code compilation using Piston API
+
+📋 Room-based sharing with copyable Room ID
+
+🌙 Monaco editor with dark theme
+
+
+🎯 Lightweight and fast
+
+
+# TECH STACKS
+| Frontend      | Backend     | Others     |
+| ------------- | ----------- | ---------- |
+| React.js      | Node.js     | Socket.IO  |
+| Monaco Editor | Express.js  | Piston API |
+| CSS           | HTTP Server | Axios      |
+
+
+# FOLDER STRUCTURE
+project-root/
+├── frontend/      # React App
+├── server/        # Express + Socket.io server
+
+# COMPILE LOGIC
+On pressing Execute, code is sent to server.
+
+Server sends code, language & version to Piston API.
+
+API returns output, which is broadcasted to all users in the same room.
+
